@@ -1,0 +1,15 @@
+[submodule "boltzmann-solver"]
+	path = boltzmann-solver
+	url = ../boltzmann-solver.git
+[submodule "hep-rs.github.io"]
+	path = hep-rs.github.io
+	url = ../hep-rs.github.io.git
+[submodule "lie"]
+	path = lie
+	url = ../lie.git
+[submodule "special-functions"]
+	path = special-functions
+	url = ../special-functions.git
+[submodule "slha"]
+	path = slha
+	url = ../slha.git
