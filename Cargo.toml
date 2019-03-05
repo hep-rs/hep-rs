@@ -1,0 +1,17 @@
+[package]
+name = "hep"
+version = "0.1.0"
+authors = ["JP-Ellis <josh@jpellis.me>"]
+
+readme = "README.md"
+description = """
+A collection of libraries for high energy physics numerical calculations.
+"""
+
+documentation = "https://github.com/hep-rs/hep-rs"
+homepage = "https://github.com/hep-rs/hep-rs"
+repository  = "https://github.com/hep-rs/hep-rs"
+
+license = "GPL-3.0"
+
+[dependencies]
