@@ -1,0 +1,13 @@
+[build]
+# rustdocflags = [
+#   "--html-in-header",     ".cargo/katex-header.html",
+#   "--html-after-content", ".cargo/katex-after.html",
+#   "--html-in-header",     ".cargo/mermaid-header.html",
+#   "--html-after-content", ".cargo/mermaid-after.html",
+# ]
+rustdocflags = [
+  "--html-in-header",     "/home/josh/src/desir/.cargo/katex-header.html",
+  "--html-after-content", "/home/josh/src/desir/.cargo/katex-after.html",
+  "--html-in-header",     "/home/josh/src/desir/.cargo/mermaid-header.html",
+  "--html-after-content", "/home/josh/src/desir/.cargo/mermaid-after.html",
+]

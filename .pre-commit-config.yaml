@@ -1,0 +1,63 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+default_stages: [commit]
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+        exclude: \.rs$
+      - id: check-symlinks
+      - id: check-toml
+      - id: check-yaml
+      - id: destroyed-symlinks
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+
+  - repo: https://gitlab.com/bmares/check-json5
+    rev: v1.0.0
+    hooks:
+      - id: check-json5
+        name: check JSON
+
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v2.1.1
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+
+  - repo: local
+    hooks:
+      - id: rustfmt
+        name: rust formatting
+        entry: rustfmt --emit files --files-with-diff
+        language: system
+        types: [rust]
+
+      - id: cargo-check
+        name: cargo check
+        entry: cargo check --all-features --all-targets --benches --tests --examples --workspace
+        language: system
+        types: [rust]
+        pass_filenames: false
+
+      - id: cargo-clippy
+        name: cargo clippy
+        entry: cargo clippy --fix --allow-staged --allow-dirty --all-features --all-targets --benches --tests --examples --workspace
+        language: system
+        types: [rust]
+        pass_filenames: false
+
+      - id: prettier
+        name: prettier
+        entry: prettier --write --list-different --ignore-unknown
+        language: node
+        types: [text]
+        additional_dependencies:
+          - prettier

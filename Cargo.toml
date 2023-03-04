@@ -1,0 +1,38 @@
+[package]
+name    = "hep-rs"
+version = "0.1.0"
+
+description   = "High energy particle physics library"
+documentation = "https://docs.rs/hep-rs"
+license       = "Apache-2.0"
+repository    = "https://github.com/hep-rs/hep-rs"
+
+edition = "2021"
+
+categories = ["science"]
+keywords   = ["science", "physics", "particle-physics"]
+
+
+    [package.metadata.docs.rs]
+    rustdoc-args = [
+        "--html-in-header",
+        ".cargo/katex-header.html",
+        "--html-after-content",
+        ".cargo/katex-after.html",
+        "--html-in-header",
+        ".cargo/mermaid-header.html",
+        "--html-after-content",
+        ".cargo/mermaid-after.html",
+    ]
+
+[badges]
+codecov = { repository = "hep-rs/hep-rs", branch = "main", service = "github" }
+
+[workspace]
+members = [
+    "hep-rs-boltzmann-solver",
+    "hep-rs-runge-kutta",
+    "hep-rs-special-functions",
+]
+
+[dependencies]

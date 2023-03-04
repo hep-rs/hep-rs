@@ -1,0 +1,17 @@
+[package]
+name    = "hep-rs-runge-kutta"
+version = "0.1.0"
+
+description   = "Explicity and Implicit Runge-Kutta methods"
+documentation = "https://docs.rs/hep-rs-runge-kutta"
+license       = "Apache-2.0"
+repository    = "https://github.com/hep-rs/hep-rs"
+
+edition = "2021"
+
+categories = ["science"]
+keywords   = ["science", "physics", "particle-physics"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
