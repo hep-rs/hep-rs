@@ -22,7 +22,7 @@ jobs:
 
       - name: Generate code coverage
         run: |
-          cargo tarpaulin --verbose --all-features --out Xml
+          cargo tarpaulin --verbose --out Xml --all-features --benches --tests --examples --workspace
 
       - name: Upload to codecov.io
         uses: codecov/codecov-action@v3
